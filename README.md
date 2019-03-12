@@ -10,22 +10,22 @@ Software for files transfer control for FC
 
 Пример задания соединения
 
-    #include <Core/Core.h>
-    #include "LoadBalancer.h"
+        #include <Core/Core.h>
+        #include "LoadBalancer.h"
+        
+        using namespace Upp;
     
-    using namespace Upp;
-    
-    CONSOLE_APP_MAIN
-    {
-      //Создадим экземпляр маршрутизатора
-      ZMQ_Load_Balancer loadBalancer;
-      
-      //Установить соединение
-      //Параметры:
-      //  1) Upp::String Frontend_Bind_String
-      //  2) Upp::String Backend_Bind_String
-      loadBalancer.Bind("tcp://*:5555", "tcp://*:5556");
-      
-      //Перейти в рабочий режим
-      loadBalancer.DoWork();
-    }
+        CONSOLE_APP_MAIN
+        {
+          //Создадим экземпляр маршрутизатора
+          ZMQ_Load_Balancer loadBalancer;
+          
+          //Установить соединение
+          //Параметры:
+          //  1) Upp::String Frontend_Bind_String
+          //  2) Upp::String Backend_Bind_String
+          loadBalancer.Bind("tcp://*:5555", "tcp://*:5556");
+          
+          //Перейти в рабочий режим
+          loadBalancer.DoWork();
+        }
