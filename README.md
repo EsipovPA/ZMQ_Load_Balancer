@@ -29,3 +29,8 @@ Software for files transfer control for FC
           //Перейти в рабочий режим
           loadBalancer.DoWork();
         }
+
+
+
+
+***Как оно работает***
